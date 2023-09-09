@@ -25,10 +25,10 @@ x = df[['carat', 'cut', 'color', 'clarity', 'depth', 'table', 'x', 'y', 'z']]
 y = df[['price']]
 
 # Разделение данных на тренировочный и тестовый наборы
-x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 25, random_state = 101) 
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 25, random_state = 155) 
 
 # Тренировка
-regr = RandomForestRegressor(n_estimators = 10, max_depth = 10, random_state =101)
+regr = RandomForestRegressor(n_estimators = 10, max_depth = 10, random_state = 155)
 regr.fit(x_train, y_train.values.ravel())
 
 # Прогнозирование
